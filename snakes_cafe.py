@@ -55,8 +55,9 @@ items = {
 
 # print the order
 num_items = 1 #TODO: properly tally items that have been ordered
-# food = []
+
 order = input("> ")
+
 while order != "quit":
     if order not in items:
         print("Please order from the menu.")
@@ -66,10 +67,6 @@ while order != "quit":
         items[order] = 1
         report = f"** 1 order of {order} has been added to your meal **"
         print(report)
-    # if order not in food:
-        # food.append(order)
-        # report = f"** {food.count(order)} order of {order} has been added to your meal **"
-        # print(report)
     else:
         items[order] += 1
         report = f"** {items[order]} orders of {order} have been added to your meal **"
